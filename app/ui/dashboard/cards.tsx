@@ -21,7 +21,7 @@ export default async function CardWrapper() {
     totalPaidInvoices,
     totalPendingInvoices,
   } = await fetchCardData();
-
+  await new Promise((resolve) => setTimeout(resolve, 3000));
   return (
     <>
       <Card title="Collected" value={totalPaidInvoices} type="collected" />
